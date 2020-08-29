@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
-
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -10,11 +10,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   imports: [
     CommonModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FlexLayoutModule
   ],
   exports:[
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FlexLayoutModule
   ]
 })
 export class SharedModule { }
