@@ -30,8 +30,7 @@ mat-sidenav-container {
 
 .name {
   font-weight: bold;
-  margin-bottom: .5em;
-
+  margin-bottom: 0.5em;
   font-size: 22px;
 }
 
@@ -39,7 +38,7 @@ mat-sidenav-container {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .place {

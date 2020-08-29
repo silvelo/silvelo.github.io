@@ -8,11 +8,23 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
+import { AboutComponent } from './pages/about/about.component';
+import { SkillsComponent } from './pages/skills/skills.component';
+import { WorkComponent } from './pages/work/work.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { EducationComponent } from './pages/education/education.component';
+import { ExperienceComponent } from './pages/experience/experience.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    SkillsComponent,
+    WorkComponent,
+    ContactComponent,
+    EducationComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

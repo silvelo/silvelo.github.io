@@ -1,18 +1,33 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav opened
                mode="side">
-    <p>Imagen Perfi</p>
+    <div fxFlex
+         fxLayout="column"
+         fxLayoutAlign="space-around center">
+      <div fxLayout="column"
+           fxLayoutAlign="center center">
+        <img src="https://s.gravatar.com/avatar/2a9686e837b16d4d051ae3ad1972e842?s=80
+      "
+             alt="Profile"
+             class="responsive-image">
 
-    <p>Imagen Perfi</p>
-    <p>Nombre</p>
-    <p>Trabajo</p>
+        <h1 class="name">Arturo Silvelo</h1>
+        <span class="position">Javascript Full Stack Developer</span>
+        <span class="place">A Coruña (Spain)</span>
+      </div>
+
+      <mat-nav-list>
+        <mat-list-item *ngFor="let link of links">
+          <a routerLinkActive="active"
+             matLine>{{ link }}</a>
+        </mat-list-item>
+      </mat-nav-list>
 
 
-    <p>LISTA DE </p>
+      <p>© Copyright 2020 All rights reserved.</p>
 
+    </div>
 
-    <p>COPYRIGHT</p>
-    
   </mat-sidenav>
   Content
 </mat-sidenav-container>
