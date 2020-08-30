@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod",
-    "start:prod": "angular-http-server --path dist/silvelo-com -o",
+    "start:prod": "npm run build:prod && angular-http-server --path dist/silvelo-com -o",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -5,23 +5,20 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    MatCardModule,
-    MatSidenavModule,
-    FlexLayoutModule,
-    MatListModule,
-    MatIconModule
+    CommonModule
   ],
   exports: [
     MatCardModule,
     MatSidenavModule,
     FlexLayoutModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ]
 })
 export class SharedModule { }

@@ -24,6 +24,11 @@ import { ExperienceComponent } from './pages/experience/experience.component';
     WorkComponent,
     ContactComponent,
     EducationComponent,
+    ExperienceComponent,
+    HomeComponent,
+    AboutComponent,
+    SkillsComponent,
+    EducationComponent,
     ExperienceComponent
   ],
   imports: [

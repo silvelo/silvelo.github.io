@@ -4,19 +4,19 @@
   height: 100%;
 }
 
-mat-drawer {
-  width: 200px;
-  padding: 10px;
+
+mat-drawer-container {
+  height: 100%;
 }
 
-mat-sidenav {
+mat-drawer {
   width: 250px;
   padding: 10px;
   background-color: #f2f3f7;
 }
 
-mat-sidenav-container {
-  height: 100%;
+mat-drawer-content {
+  padding: 10px;
 }
 
 .responsive-image {
@@ -49,5 +49,6 @@ mat-sidenav-container {
 }
 
 .mat-nav-list a.active {
-  background: #2c98f0;
+  text-decoration: underline;
+  text-decoration-color: #2c98f0;
 }

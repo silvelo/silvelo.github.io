@@ -9,16 +9,21 @@ exports.__esModule = true;
 exports.AppComponent = void 0;
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'silvelo-com';
+    function AppComponent(changeDetectorRef, media) {
         this.links = [
-            'HOME',
-            'ABOUT',
-            'SKILLS',
-            'EDUCATION',
-            'EXPERIENCE'
+            { title: 'HOME', ref: '/home' },
+            { title: 'ABOUT', ref: '/about-us' },
+            { title: 'SKILLS', ref: '/skills' },
+            { title: 'EDUCATION', ref: '/education' },
+            { title: 'EXPERIENCE', ref: '/experience' }
         ];
+        this.mobileQuery = media.matchMedia('(max-width: 720px)');
+        this._mobileQueryListener = function () { return changeDetectorRef.detectChanges(); };
+        this.mobileQuery.addListener(this._mobileQueryListener);
     }
+    AppComponent.prototype.ngOnDestroy = function () {
+        this.mobileQuery.removeListener(this._mobileQueryListener);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',
