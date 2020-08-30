@@ -17,11 +17,9 @@ var animations_1 = require("@angular/platform-browser/animations");
 var home_component_1 = require("./pages/home/home.component");
 var shared_module_1 = require("./shared/shared.module");
 var about_component_1 = require("./pages/about/about.component");
-var skills_component_1 = require("./pages/skills/skills.component");
-var work_component_1 = require("./pages/work/work.component");
-var contact_component_1 = require("./pages/contact/contact.component");
 var education_component_1 = require("./pages/education/education.component");
 var experience_component_1 = require("./pages/experience/experience.component");
+var http_1 = require("@angular/common/http");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -31,14 +29,10 @@ var AppModule = /** @class */ (function () {
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
                 about_component_1.AboutComponent,
-                skills_component_1.SkillsComponent,
-                work_component_1.WorkComponent,
-                contact_component_1.ContactComponent,
                 education_component_1.EducationComponent,
                 experience_component_1.ExperienceComponent,
                 home_component_1.HomeComponent,
                 about_component_1.AboutComponent,
-                skills_component_1.SkillsComponent,
                 education_component_1.EducationComponent,
                 experience_component_1.ExperienceComponent
             ],
@@ -47,7 +41,8 @@ var AppModule = /** @class */ (function () {
                 app_routing_module_1.AppRoutingModule,
                 service_worker_1.ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment_1.environment.production }),
                 animations_1.BrowserAnimationsModule,
-                shared_module_1.SharedModule
+                shared_module_1.SharedModule,
+                http_1.HttpClientModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

@@ -11,7 +11,6 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var about_component_1 = require("./pages/about/about.component");
 var home_component_1 = require("./pages/home/home.component");
-var skills_component_1 = require("./pages/skills/skills.component");
 var education_component_1 = require("./pages/education/education.component");
 var experience_component_1 = require("./pages/experience/experience.component");
 var routes = [{
@@ -20,9 +19,6 @@ var routes = [{
     }, {
         path: 'about-us',
         component: about_component_1.AboutComponent
-    }, {
-        path: 'skills',
-        component: skills_component_1.SkillsComponent
     }, {
         path: 'education',
         component: education_component_1.EducationComponent

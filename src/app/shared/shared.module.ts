@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [],
@@ -17,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatSidenavModule,
     FlexLayoutModule,
     MatListModule,
+    MatExpansionModule,
     MatIconModule,
     MatToolbarModule
   ]

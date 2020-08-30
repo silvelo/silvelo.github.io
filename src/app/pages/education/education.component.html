@@ -1,1 +1,16 @@
-<p>education works!</p>
+<mat-list>
+  <mat-list-item fxLayout="column"
+                 *ngFor="let edu of education">
+
+    <img class="list-image"
+         [src]="edu.logo">
+
+    <div fxLayout="column">
+      <span mat-line><strong>{{edu.degree}}</strong></span>
+      <span mat-line>{{edu.college}}</span>
+      <span mat-line> {{edu.startDate | date: 'MM/yyyy'}} - {{edu.endDate | date:'MM/yyyy'}} </span>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+
+</mat-list>

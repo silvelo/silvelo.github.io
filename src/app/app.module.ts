@@ -9,25 +9,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { AboutComponent } from './pages/about/about.component';
-import { SkillsComponent } from './pages/skills/skills.component';
-import { WorkComponent } from './pages/work/work.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { EducationComponent } from './pages/education/education.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    SkillsComponent,
-    WorkComponent,
-    ContactComponent,
     EducationComponent,
     ExperienceComponent,
     HomeComponent,
     AboutComponent,
-    SkillsComponent,
     EducationComponent,
     ExperienceComponent
   ],
@@ -36,7 +30,8 @@ import { ExperienceComponent } from './pages/experience/experience.component';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

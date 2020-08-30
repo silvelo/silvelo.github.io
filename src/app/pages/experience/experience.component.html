@@ -1,1 +1,16 @@
-<p>experience works!</p>
+<mat-list>
+  <mat-list-item fxLayout="column"
+                 *ngFor="let exp of experience">
+
+    <img class="list-image"
+         [src]="exp.logo">
+
+    <div fxLayout="column">
+      <span mat-line><strong>{{exp.position}}</strong></span>
+      <span mat-line>{{exp.company}}</span>
+      <span mat-line> {{exp.startDate | date: 'MM/yyyy'}} - {{exp.endDate | date:'MM/yyyy'}} </span>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+
+</mat-list>

@@ -9,17 +9,21 @@ exports.__esModule = true;
 exports.AppComponent = void 0;
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
-    function AppComponent(changeDetectorRef, media) {
+    function AppComponent(domSanitizer, matIconRegistry, changeDetectorRef, media) {
+        this.domSanitizer = domSanitizer;
+        this.matIconRegistry = matIconRegistry;
         this.links = [
             { title: 'HOME', ref: '/home' },
             { title: 'ABOUT', ref: '/about-us' },
-            { title: 'SKILLS', ref: '/skills' },
             { title: 'EDUCATION', ref: '/education' },
             { title: 'EXPERIENCE', ref: '/experience' }
         ];
         this.mobileQuery = media.matchMedia('(max-width: 720px)');
         this._mobileQueryListener = function () { return changeDetectorRef.detectChanges(); };
         this.mobileQuery.addListener(this._mobileQueryListener);
+        this.matIconRegistry.addSvgIcon('github', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/github.svg'));
+        this.matIconRegistry.addSvgIcon('linkedin', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/linkedin.svg'));
+        this.matIconRegistry.addSvgIcon('twitter', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/twitter.svg'));
     }
     AppComponent.prototype.ngOnDestroy = function () {
         this.mobileQuery.removeListener(this._mobileQueryListener);

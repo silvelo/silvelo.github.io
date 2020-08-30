@@ -15,6 +15,7 @@ var flex_layout_1 = require("@angular/flex-layout");
 var list_1 = require("@angular/material/list");
 var icon_1 = require("@angular/material/icon");
 var toolbar_1 = require("@angular/material/toolbar");
+var expansion_1 = require("@angular/material/expansion");
 var SharedModule = /** @class */ (function () {
     function SharedModule() {
     }
@@ -29,6 +30,7 @@ var SharedModule = /** @class */ (function () {
                 sidenav_1.MatSidenavModule,
                 flex_layout_1.FlexLayoutModule,
                 list_1.MatListModule,
+                expansion_1.MatExpansionModule,
                 icon_1.MatIconModule,
                 toolbar_1.MatToolbarModule
             ]
