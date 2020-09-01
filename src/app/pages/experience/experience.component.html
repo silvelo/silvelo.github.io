@@ -1,16 +1,19 @@
 <mat-list>
-  <mat-list-item fxLayout="column"
-                 *ngFor="let exp of experience">
+  <div mat-header>EXPERIENCIA</div>
+  <div mat-subheader>Experiencia</div>
 
-    <img class="list-image"
-         [src]="exp.logo">
+  <app-list-experience *ngFor="let exp of experience"
+                       [experience]="exp"></app-list-experience>
 
-    <div fxLayout="column">
-      <span mat-line><strong>{{exp.position}}</strong></span>
-      <span mat-line>{{exp.company}}</span>
-      <span mat-line> {{exp.startDate | date: 'MM/yyyy'}} - {{exp.endDate | date:'MM/yyyy'}} </span>
-    </div>
-    <mat-divider></mat-divider>
-  </mat-list-item>
 
+  <div mat-subheader>Publicaciones</div>
+
+  <app-list-publications *ngFor="let publication of publications"
+                         [publication]="publication"></app-list-publications>
+
+
+  <div mat-subheader>Reconocimientos y premios</div>
+
+  <app-list-awards *ngFor="let award of awards"
+                   [award]="award"></app-list-awards>
 </mat-list>

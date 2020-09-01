@@ -1,0 +1,20 @@
+<mat-list-item fxLayout="column">
+
+  <img class="list-image"
+       [src]="education.college_logo">
+
+  <div fxLayout="column">
+    <div mat-line>
+      <strong>{{education.degree}}</strong>
+      <span class="date"><small *ngIf="education.end_date else actual"> {{education.start_date | date: 'yyyy'}} -
+          {{education.end_date | date:'yyyy'}}</small></span>
+    </div>
+    <span mat-line>{{education.college_name}}</span>
+
+
+    <ng-template #actual>
+      <small>{{education.start_date | date: 'yyyy'}}</small>
+    </ng-template>
+  </div>
+  <mat-divider></mat-divider>
+</mat-list-item>

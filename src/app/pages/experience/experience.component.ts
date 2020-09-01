@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, Experience } from 'src/app/services/api.service';
+import { ApiService } from 'src/app/services/api.service';
+import { IExperience, IAward, IPublication } from '../../services/api.service';
 
 @Component({
   selector: 'app-experience',
@@ -7,12 +8,16 @@ import { ApiService, Experience } from 'src/app/services/api.service';
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
-  experience: Experience[] = [];
+  experience: IExperience[] = [];
+  awards: IAward[] = [];
+  publications: IPublication[] = [];
 
   constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
-    this.experience = this.apiService.getExperience();
+  async ngOnInit() {
+    this.experience = await this.apiService.getExperience();
+    this.awards = await this.apiService.getAwards();
+    this.publications = await this.apiService.getPublications();
   }
 
 }

@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, Education } from 'src/app/services/api.service';
+import { ApiService, } from 'src/app/services/api.service';
+import { ICertification, IEducation } from '../../services/api.service';
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit {
-  education: Education[] = [];
-
+  education: IEducation[] = [];
+  certification: ICertification[] = [];
   constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
-    this.education = this.apiService.getEducation();
+  async ngOnInit() {
+    this.education = await this.apiService.getEducation();
+    this.certification = await this.apiService.getCertification();
   }
 
 }

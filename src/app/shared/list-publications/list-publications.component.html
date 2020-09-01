@@ -1,0 +1,10 @@
+<mat-list-item fxLayout="column">
+
+
+  <div mat-line>
+    <strong>{{publication.title}}</strong>
+    <span class="date"><small> {{publication.publication_date | date: 'yyyy'}}</small></span>
+  </div>
+  <span mat-line>{{publication.editorial}}</span>
+  <mat-divider></mat-divider>
+</mat-list-item>

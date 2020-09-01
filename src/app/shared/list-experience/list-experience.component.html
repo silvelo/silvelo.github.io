@@ -1,0 +1,20 @@
+<mat-list-item>
+
+  <img class="list-image"
+       [src]="experience.company_logo">
+
+  <div fxLayout="column">
+    <div mat-line>
+      <strong>{{experience.position}}</strong>
+      <span class="date"><small *ngIf="experience.end_date else actual"> {{experience.start_date | date: 'yyyy'}} -
+          {{experience.end_date | date:'yyyy'}}</small></span>
+    </div>
+    <span mat-line>{{experience.company_name}}</span>
+
+
+    <ng-template #actual>
+      <small>{{experience.start_date | date: 'yyyy'}}</small>
+    </ng-template>
+  </div>
+  <mat-divider></mat-divider>
+</mat-list-item>

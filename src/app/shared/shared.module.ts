@@ -7,11 +7,22 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import { ListExperienceComponent } from './list-experience/list-experience.component';
+import { ListEducationComponent } from './list-education/list-education.component';
+import { ListCertificationComponent } from './list-certification/list-certification.component';
+import { ListAwardsComponent } from './list-awards/list-awards.component';
+import { ListPublicationsComponent } from './list-publications/list-publications.component';
 @NgModule({
-  declarations: [],
+  declarations: [
+    ListExperienceComponent,
+    ListEducationComponent,
+    ListCertificationComponent,
+    ListAwardsComponent,
+    ListPublicationsComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatListModule
   ],
   exports: [
     MatCardModule,
@@ -20,7 +31,12 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatListModule,
     MatExpansionModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ListExperienceComponent,
+    ListEducationComponent,
+    ListCertificationComponent,
+    ListAwardsComponent,
+    ListPublicationsComponent
   ]
 })
 export class SharedModule { }

@@ -16,14 +16,16 @@ var list_1 = require("@angular/material/list");
 var icon_1 = require("@angular/material/icon");
 var toolbar_1 = require("@angular/material/toolbar");
 var expansion_1 = require("@angular/material/expansion");
+var list_2 = require("list");
 var SharedModule = /** @class */ (function () {
     function SharedModule() {
     }
     SharedModule = __decorate([
         core_1.NgModule({
-            declarations: [],
+            declarations: [list_2.ListExperience],
             imports: [
-                common_1.CommonModule
+                common_1.CommonModule,
+                list_1.MatListModule
             ],
             exports: [
                 card_1.MatCardModule,

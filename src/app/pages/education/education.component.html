@@ -1,16 +1,11 @@
 <mat-list>
-  <mat-list-item fxLayout="column"
-                 *ngFor="let edu of education">
+  <div mat-header>EDUCACIÓN</div>
+  <div mat-subheader>Educación</div>
 
-    <img class="list-image"
-         [src]="edu.logo">
+  <app-list-education *ngFor="let edu of education"
+                      [education]="edu"></app-list-education>
 
-    <div fxLayout="column">
-      <span mat-line><strong>{{edu.degree}}</strong></span>
-      <span mat-line>{{edu.college}}</span>
-      <span mat-line> {{edu.startDate | date: 'MM/yyyy'}} - {{edu.endDate | date:'MM/yyyy'}} </span>
-    </div>
-    <mat-divider></mat-divider>
-  </mat-list-item>
-
+  <div mat-subheader>Certificaciones</div>
+  <app-list-certification *ngFor="let cert of certification"
+                          [certification]="cert"></app-list-certification>
 </mat-list>
