@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const purify = require('gulp-purifycss');
+const removeCode = require('gulp-remove-code');
 
 gulp.task('purifyCSS', () => {
   return gulp.src('./dist/silvelo/styles.*.css')
