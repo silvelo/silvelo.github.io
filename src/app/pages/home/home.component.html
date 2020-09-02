@@ -17,6 +17,7 @@
              fxFlex="20"
              *ngFor="let social of socialNetworks"
              [href]="social.social_url"
+             rel="noreferrer"
              target="_blank">
                <img [src]="social.social_icon"
                     [alt]="social.social_url"
