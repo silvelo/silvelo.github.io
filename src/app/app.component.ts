@@ -2,6 +2,7 @@ import { Component, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class AppComponent implements OnDestroy {
 
   mobileQuery: MediaQueryList;
-
+  sidenav: ISidenav[] = [];
+  me: IMeInfo = {} as IMeInfo;
   links = [
     { title: 'HOME', ref: '/home' },
     { title: 'ABOUT', ref: '/about-us' },
@@ -23,6 +25,7 @@ export class AppComponent implements OnDestroy {
 
   constructor(
     private domSanitizer: DomSanitizer,
+    private _apiService: ApiService,
     private matIconRegistry: MatIconRegistry,
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher
@@ -43,7 +46,10 @@ export class AppComponent implements OnDestroy {
       this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/twitter.svg')
     );
   }
-
+  async ngOnInit() {
+    this.sidenav = await this._apiService.getMenu();
+    this.me = await this._apiService.getAbout();
+  }
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);

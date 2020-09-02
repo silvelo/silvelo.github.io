@@ -14,10 +14,13 @@
     "lib": [
       "es2018",
       "dom"
+    ],
+    "typeRoots": [
+      "src/types/"
     ]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
 }

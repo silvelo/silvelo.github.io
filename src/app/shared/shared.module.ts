@@ -12,13 +12,15 @@ import { ListEducationComponent } from './list-education/list-education.componen
 import { ListCertificationComponent } from './list-certification/list-certification.component';
 import { ListAwardsComponent } from './list-awards/list-awards.component';
 import { ListPublicationsComponent } from './list-publications/list-publications.component';
+import { TimeToPipe } from '../pipes/time-to.pipe';
 @NgModule({
   declarations: [
     ListExperienceComponent,
     ListEducationComponent,
     ListCertificationComponent,
     ListAwardsComponent,
-    ListPublicationsComponent
+    ListPublicationsComponent,
+    TimeToPipe
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { ListPublicationsComponent } from './list-publications/list-publications
     ListEducationComponent,
     ListCertificationComponent,
     ListAwardsComponent,
-    ListPublicationsComponent
+    ListPublicationsComponent,
+    TimeToPipe
   ]
 })
 export class SharedModule { }

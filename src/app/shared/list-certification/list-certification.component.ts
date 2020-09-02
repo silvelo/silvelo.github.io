@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ICertification } from 'src/app/services/api.service';
+
 
 @Component({
   selector: 'app-list-certification',

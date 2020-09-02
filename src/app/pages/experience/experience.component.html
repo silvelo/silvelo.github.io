@@ -1,19 +1,17 @@
+<div class="mat-header">Experiencia</div>
 <mat-list>
-  <div mat-header>EXPERIENCIA</div>
-  <div mat-subheader>Experiencia</div>
-
   <app-list-experience *ngFor="let exp of experience"
                        [experience]="exp"></app-list-experience>
+</mat-list>
 
-
-  <div mat-subheader>Publicaciones</div>
-
+<div class="mat-header">Publicaciones</div>
+<mat-list>
   <app-list-publications *ngFor="let publication of publications"
                          [publication]="publication"></app-list-publications>
+</mat-list>
 
-
-  <div mat-subheader>Reconocimientos y premios</div>
-
+<div class="mat-header">Reconocimientos y premios</div>
+<mat-list>
   <app-list-awards *ngFor="let award of awards"
                    [award]="award"></app-list-awards>
 </mat-list>

@@ -7,7 +7,7 @@ import { ExperienceComponent } from './pages/experience/experience.component';
 
 
 const routes: Routes = [{
-  path: 'home',
+  path: '',
   component: HomeComponent,
 }, {
   path: 'about-us',
@@ -19,7 +19,7 @@ const routes: Routes = [{
   path: 'experience',
   component: ExperienceComponent,
 },
-{ path: '', redirectTo: '/home', pathMatch: 'full' },
+{ path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
 @NgModule({

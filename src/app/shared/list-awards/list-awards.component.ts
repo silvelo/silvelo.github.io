@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IAward } from 'src/app/services/api.service';
+
 
 @Component({
   selector: 'app-list-awards',

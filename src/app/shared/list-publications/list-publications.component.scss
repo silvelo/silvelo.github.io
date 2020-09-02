@@ -1,10 +1,16 @@
+:host {
+  display      : block;
+  margin-top   : 15px;
+  border-bottom: 1px solid black;
+}
+
 .date {
   padding-left: 10px;
 }
 
 .list-image {
-  width: 100%;
-  max-width: 75px;
-  height: auto;
+  width       : 100%;
+  max-width   : 75px;
+  height      : auto;
   margin-right: 25px;
 }

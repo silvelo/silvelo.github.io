@@ -1,10 +1,12 @@
 <mat-list-item fxLayout="column">
 
 
-  <div mat-line>
-    <strong>{{award.title}}</strong>
-    <span class="date"><small> {{award.expedition | date: 'yyyy'}}</small></span>
+  <img class="list-image"
+       [src]="award.issuer_logo">
+  <div fxLayout="column">
+    <span mat-line><strong>{{award.title}}</strong></span>
+    <span mat-line>{{award.issuer}}</span>
+    <span mat-line><small> {{award.expedition | date: 'yyyy'}}</small></span>
   </div>
-  <span mat-line>{{award.issuer}}</span>
-  <mat-divider></mat-divider>
+
 </mat-list-item>

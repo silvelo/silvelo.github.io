@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IPublication } from '../../services/api.service';
+
 
 @Component({
   selector: 'app-list-publications',

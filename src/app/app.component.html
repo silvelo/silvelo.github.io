@@ -14,75 +14,39 @@
          fxLayoutAlign="space-around center">
       <div fxLayout="column"
            fxLayoutAlign="center center">
-        <img src="https://s.gravatar.com/avatar/2a9686e837b16d4d051ae3ad1972e842?s=80
-           "
+        <img [src]="me.profile"
              alt="Profile"
              class="responsive-image">
 
-        <h1 class="name">Arturo Silvelo</h1>
-        <span class="position">Javascript Full Stack Developer</span>
-        <span class="place">A Coruña (Spain)</span>
+        <h1 class="name">{{me.name}}</h1>
+        <span class="position">{{me.position}}</span>
+        <span class="place">{{me.place}}</span>
       </div>
 
       <mat-nav-list>
-        <mat-list-item *ngFor="let link of links">
-          <a [routerLink]="link.ref"
+        <mat-list-item *ngFor="let nav of sidenav">
+          <a [routerLink]="nav.ref"
              routerLinkActive="active"
-             matLine>{{ link.title }}</a>
+             matLine>{{ nav.title }}</a>
         </mat-list-item>
       </mat-nav-list>
 
 
-      <p>© Copyright 2020 All rights reserved.</p>
+      <div>
+        <div fxLayout="row"
+             class="full-width"
+             fxLayoutAlign="space-between center">
 
+          <span>Powered By</span>
+          <img class="img-responsive"
+               src="/assets/images/butter.png">
+        </div>
+        <br>
+        <p>© Copyright 2020 All rights reserved.</p>
+      </div>
     </div>
   </mat-drawer>
   <mat-drawer-content>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
-<!-- <mat-toolbar *ngIf="mobileQuery.matches"
-             color="primary">
-  <button mat-icon-button
-          (click)="snav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-</mat-toolbar>
-
-<mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-  <mat-sidenav #snav
-               [mode]="mobileQuery.matches ? 'over' : 'side'"
-               [fixedInViewport]="mobileQuery.matches"
-               fixedTopGap="56">
-    <div fxFlex
-         fxLayout="column"
-         fxLayoutAlign="space-around center">
-      <div fxLayout="column"
-           fxLayoutAlign="center center">
-        <img src="https://s.gravatar.com/avatar/2a9686e837b16d4d051ae3ad1972e842?s=80
-      "
-             alt="Profile"
-             class="responsive-image">
-
-        <h1 class="name">Arturo Silvelo</h1>
-        <span class="position">Javascript Full Stack Developer</span>
-        <span class="place">A Coruña (Spain)</span>
-      </div>
-
-      <mat-nav-list>
-        <mat-list-item *ngFor="let link of links">
-          <a [routerLink]="link.ref"
-             routerLinkActive="active"
-             matLine>{{ link.title }}</a>
-        </mat-list-item>
-      </mat-nav-list>
-
-
-      <p>© Copyright 2020 All rights reserved.</p>
-
-    </div>
-
-  </mat-sidenav>
-  <router-outlet></router-outlet>
-</mat-sidenav-container>
- -->

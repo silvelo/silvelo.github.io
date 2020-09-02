@@ -4,12 +4,10 @@
        [src]="certification.company_logo">
 
   <div fxLayout="column">
-    <div mat-line>
-      <strong>{{certification.title}}</strong>
-      <span class="date"><small> {{certification.expedition | date: 'yyyy'}}</small></span>
-    </div>
+    <span mat-line><strong>{{certification.title}}</strong></span>
     <span mat-line>{{certification.company_name}}</span>
+    <span mat-line><small> {{certification.expedition | date: 'yyyy'}}</small></span>
 
   </div>
-  <mat-divider></mat-divider>
+
 </mat-list-item>

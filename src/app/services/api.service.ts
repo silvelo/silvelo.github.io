@@ -12,68 +12,53 @@ export class ApiService {
   }
 
   async getEducation(): Promise<IEducation[]> {
-    const res = await this._butterService.content.retrieve(['education']);
+    const res = await this.getContent(['education']);
     return res.data.data.education;
   }
 
   async getCertification(): Promise<ICertification[]> {
-    const res = await this._butterService.content.retrieve(['certification']);
+    const res = await this.getContent(['certification']);
     return res.data.data.certification;
   }
 
   async getExperience(): Promise<IExperience[]> {
-    const res = await this._butterService.content.retrieve(['experience']);
+    const res = await this.getContent(['experience']);
     return res.data.data.experience;
   }
 
   async getAwards(): Promise<IAward[]> {
-    const res = await this._butterService.content.retrieve(['awards']);
+    const res = await this.getContent(['awards']);
     return res.data.data.awards;
   }
 
-
   async getPublications(): Promise<IPublication[]> {
-    const res = await this._butterService.content.retrieve(['publication']);
+    const res = await this.getContent(['publication']);
     return res.data.data.publication;
   }
-}
 
-export interface IEducation {
-  degree: string;
-  start_date: string;
-  end_date: string;
-  college_name: string;
-  college_logo: string;
-}
+  async getSocial(): Promise<ISocialNetwork[]> {
+    const res = await this.getContent(['social-network']);
+    return res.data.data['social-network'];
+  }
 
-export interface IAward {
-  title: string;
-  issuer: string;
-  description: string;
-  expedition: Date;
-}
-export interface IExperience {
-  position: string;
-  start_date: string;
-  end_date: string;
-  company_name: string;
-  description: string;
-  company_logo: string;
-}
+  async getMenu(): Promise<ISidenav[]> {
+    const res = await this.getContent(['sidenav']);
+    return res.data.data.sidenav;
+  }
 
-export interface ICertification {
-  title: string;
-  company_name: string;
-  company_logo: string;
-  expedition: Date;
-  credential_url: string;
-}
+  async getAbout(): Promise<IMeInfo> {
+    const res = await this.getContent(['me-info']);
+    const aboutMe = res.data.data['me-info']
+    if (aboutMe.length > 0) {
+      return aboutMe[0];
+    } else {
+      return {} as IMeInfo;
+    }
 
-export interface IPublication {
-  title: string;
-  editorial: string;
-  publication_date: Date;
-  author: string;
-  publication_url: string;
-  description: string;
+  }
+
+
+  async getContent(content: string[]) {
+    return await this._butterService.content.retrieve(content);
+  }
 }
