@@ -34,3 +34,24 @@ body {
   max-width: 120px;
   height   : auto;
 }
+
+.date {
+  padding-left: 10px;
+}
+
+.list-image {
+  width       : 100%;
+  max-width   : 60px;
+  height      : auto;
+  margin-right: 25px;
+}
+
+app-list-certification,
+app-list-awards,
+app-list-publications,
+app-list-education,
+app-list-experience {
+  display      : block;
+  margin-top   : 15px;
+  border-bottom: 1px solid black;
+}
