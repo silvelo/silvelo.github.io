@@ -6,8 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TimeToPipe implements PipeTransform {
 
   transform(startDate: string, endDate: string): string {
-    console.log(startDate)
-    console.log(endDate)
     let end = null;
     if (!endDate) {
       end = new Date();

@@ -10,7 +10,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-
+/*
 .mat-line {
   word-wrap  : break-word !important;
   white-space: pre-wrap !important;
@@ -18,7 +18,7 @@ body {
 
 .mat-list-item {
   height: initial !important;
-}
+} */
 
 .mat-header {
   margin: 10px 0;
@@ -46,12 +46,44 @@ body {
   margin-right: 25px;
 }
 
+.nav-list {
+  border-bottom: 1px solid black;
+}
+
+.link-active {
+  background-color: rgb(200, 200, 200, 0.4);
+}
+
+h2 {
+  margin-top: 16px !important;
+}
+
 app-list-certification,
 app-list-awards,
 app-list-publications,
 app-list-education,
 app-list-experience {
   display      : block;
-  margin-top   : 15px;
   border-bottom: 1px solid black;
+  padding      : 5px 0;
+}
+
+
+
+
+.mat-line {
+  word-wrap  : break-word !important;
+  white-space: pre-wrap !important;
+}
+
+.mat-list .mat-list-item {
+  height: initial !important;
+}
+
+
+
+@media (max-width: 400px) {
+  .list-image {
+    display: none;
+  }
 }

@@ -11,6 +11,7 @@ import { ListCertificationComponent } from './list-certification/list-certificat
 import { ListAwardsComponent } from './list-awards/list-awards.component';
 import { ListPublicationsComponent } from './list-publications/list-publications.component';
 import { TimeToPipe } from '../pipes/time-to.pipe';
+import { ListPortfolioComponent } from './list-portfolio/list-portfolio.component';
 @NgModule({
   declarations: [
     ListExperienceComponent,
@@ -18,11 +19,13 @@ import { TimeToPipe } from '../pipes/time-to.pipe';
     ListCertificationComponent,
     ListAwardsComponent,
     ListPublicationsComponent,
-    TimeToPipe
+    TimeToPipe,
+    ListPortfolioComponent
   ],
   imports: [
     CommonModule,
-    MatListModule
+    MatListModule,
+    FlexLayoutModule
   ],
   exports: [
     MatSidenavModule,
@@ -34,6 +37,7 @@ import { TimeToPipe } from '../pipes/time-to.pipe';
     ListEducationComponent,
     ListCertificationComponent,
     ListAwardsComponent,
+    ListPortfolioComponent,
     ListPublicationsComponent,
     TimeToPipe
   ]

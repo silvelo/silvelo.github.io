@@ -48,13 +48,17 @@ export class ApiService {
 
   async getAbout(): Promise<IMeInfo> {
     const res = await this.getContent(['me-info']);
-    const aboutMe = res.data.data['me-info']
+    const aboutMe = res.data.data['me-info'];
     if (aboutMe.length > 0) {
       return aboutMe[0];
     } else {
       return {} as IMeInfo;
     }
+  }
 
+  async getPortfolio(): Promise<IPortfolio[]> {
+    const res = await this.getContent(['portfolio']);
+    return res.data.data.portfolio;
   }
 
 

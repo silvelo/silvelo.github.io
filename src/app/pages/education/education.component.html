@@ -1,11 +1,11 @@
+<h2>Educación</h2>
 <mat-list>
-
-  <div class="mat-header">Educación</div>
 
   <app-list-education *ngFor="let edu of education"
                       [education]="edu"></app-list-education>
-
-  <div class="mat-header">Certificaciones</div>
+</mat-list>
+<h2>Certificaciones</h2>
+<mat-list>
   <app-list-certification *ngFor="let cert of certification"
                           [certification]="cert"></app-list-certification>
 </mat-list>

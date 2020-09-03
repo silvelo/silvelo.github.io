@@ -1,7 +1,6 @@
 <mat-list-item fxLayout="column">
-
-
   <img class="list-image"
+       [fxHide]="!award.issuer_logo"
        [alt]="award.issuer"
        [src]="award.issuer_logo">
   <div fxLayout="column">

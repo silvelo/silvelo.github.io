@@ -2,7 +2,7 @@
      fxLayout="column"
      fxLayoutAlign="center center">
      <div fxLayout="column"
-          fxLayoutAlign="center center"
+          fxLayoutAlign="center start"
           [innerHTML]="me.home">
      </div>
 
@@ -11,6 +11,9 @@
           fxLayoutAlign="space-around center">
 
           <a mat-icon-button
+             angulartics2On="click"
+             [angularticsAction]="social.social_icon"
+             [angularticsValue]="social.social_url"
              [attr.aria-label]="social.social_icon"
              fxFlex.lt-md="33"
              fxFlex.lt-sm="100"

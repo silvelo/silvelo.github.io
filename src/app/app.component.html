@@ -26,11 +26,12 @@
       </div>
 
       <mat-nav-list>
-        <mat-list-item *ngFor="let nav of sidenav">
-          <a [routerLink]="nav.ref"
-             routerLinkActive="active"
-             matLine>{{ nav.title }}</a>
-        </mat-list-item>
+        <a *ngFor="let nav of sidenav"
+           class="nav-list"
+           mat-list-item
+           [routerLink]="nav.ref"
+           routerLinkActive="link-active">{{ nav.title }}</a>
+
       </mat-nav-list>
 
 

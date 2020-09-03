@@ -59,3 +59,7 @@ declare interface IMeInfo {
   home: string;
   profile: string;
 }
+declare interface IPortfolio {
+  title: string;
+  url: string;
+}
