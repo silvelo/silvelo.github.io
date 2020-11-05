@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { Angulartics2Module } from 'angulartics2';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
     HttpClientModule,
     Angulartics2Module.forRoot()
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
