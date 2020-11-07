@@ -62,4 +62,5 @@ declare interface IMeInfo {
 declare interface IPortfolio {
   title: string;
   url: string;
+  image: string;
 }

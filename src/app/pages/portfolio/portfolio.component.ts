@@ -9,10 +9,10 @@ import { ApiService } from 'src/app/services/api.service';
 export class PortfolioComponent implements OnInit {
   portfolio: IPortfolio[] = [];
 
-  constructor(private _apiService: ApiService) { }
+  constructor(private apiService: ApiService) { }
 
   async ngOnInit() {
-    this.portfolio = await this._apiService.getPortfolio();
+    this.portfolio = await this.apiService.getPortfolio();
   }
 
 }

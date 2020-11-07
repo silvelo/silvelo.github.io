@@ -12,6 +12,9 @@ import { ListAwardsComponent } from './list-awards/list-awards.component';
 import { ListPublicationsComponent } from './list-publications/list-publications.component';
 import { TimeToPipe } from '../pipes/time-to.pipe';
 import { ListPortfolioComponent } from './list-portfolio/list-portfolio.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     ListExperienceComponent,
@@ -32,6 +35,7 @@ import { ListPortfolioComponent } from './list-portfolio/list-portfolio.componen
     FlexLayoutModule,
     MatListModule,
     MatIconModule,
+    MatCardModule,
     MatToolbarModule,
     ListExperienceComponent,
     ListEducationComponent,
@@ -39,7 +43,8 @@ import { ListPortfolioComponent } from './list-portfolio/list-portfolio.componen
     ListAwardsComponent,
     ListPortfolioComponent,
     ListPublicationsComponent,
-    TimeToPipe
+    TimeToPipe,
+    MatButtonModule
   ]
 })
 export class SharedModule { }
