@@ -1,8 +1,14 @@
-<h1>Portfolio</h1>
+<h1><strong>Portfolio</strong></h1>
+<mat-divider></mat-divider>
+
 <div fxLayout="row wrap"
-     fxLayoutAlign="space-between center">
+     class="border"
+     fxLayoutAlign="space-around">
   <mat-card *ngFor="let folio of portfolio"
-            fxFlex="45">
+            class="border-card"
+            fxFlex="33"
+            fxFlex.lt-lg="46"
+            fxFlex.lt-sm="100">
     <mat-card-header>
       <mat-card-title>{{folio.title}}</mat-card-title>
     </mat-card-header>

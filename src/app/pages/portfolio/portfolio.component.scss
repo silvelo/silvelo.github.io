@@ -2,7 +2,14 @@
   flex-direction: column;
   box-sizing    : border-box;
   display       : flex;
+  height        : 100%;
+  padding-top   : 10px;
+}
 
-  place-content: center;
+.border {
+  padding: 5px;
+}
 
+.border-card {
+  margin: 5px
 }
