@@ -1,31 +1,3 @@
-<div fxFill
-     fxLayout="column"
-     fxLayoutAlign="center center">
-     <div fxLayout="column"
-          fxLayoutAlign="center start"
-          [innerHTML]="me.home">
-     </div>
+<h1>Arturo Silvelo</h1>
 
-     <div fxLayout="row wrap"
-          class="full-width"
-          fxLayoutAlign="space-around center">
-
-          <a mat-icon-button
-             angulartics2On="click"
-             [angularticsAction]="social.social_icon"
-             [angularticsValue]="social.social_url"
-             [attr.aria-label]="social.social_icon"
-             fxFlex.lt-md="33"
-             fxFlex.lt-sm="100"
-             fxFlex="20"
-             *ngFor="let social of socialNetworks"
-             [href]="social.social_url"
-             rel="noreferrer"
-             target="_blank">
-               <img [src]="social.social_icon"
-                    [alt]="social.social_url"
-                    class="social-icon">
-          </a>
-
-     </div>
-</div>
+<h4>Fullstack Developer</h4>
