@@ -10,11 +10,15 @@ mat-drawer-container {
 }
 
 mat-drawer {
-  width           : 250px;
-  padding         : 10px;
-  background-color: #f2f3f7;
+  width     : 250px;
+  padding   : 10px;
+  background: #b1aea0;
 }
 
 mat-drawer-content {
   padding: 0 80px;
+}
+
+.mat-toolbar {
+  background: #b1aea0;
 }

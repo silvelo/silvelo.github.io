@@ -6,8 +6,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { TimeToPipe } from '../pipes/time-to.pipe';
-
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -18,7 +16,6 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     SidenavMenuComponent,
-    TimeToPipe,
   ],
   imports: [
     CommonModule,
@@ -35,8 +32,7 @@ import { RouterModule } from '@angular/router';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
-    SidenavMenuComponent,
-    TimeToPipe
+    SidenavMenuComponent
   ]
 })
 export class SharedModule { }
