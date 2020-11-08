@@ -5,6 +5,7 @@ import { ResumeComponent } from './resume.component';
 import { CertificationsCardsComponent } from './certifications-cards/certifications-cards.component';
 import { EducationCardsComponent } from './education-cards/education-cards.component';
 import { ExperienceCardsComponent } from './experience-cards/experience-cards.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -17,7 +18,8 @@ import { ExperienceCardsComponent } from './experience-cards/experience-cards.co
   ],
   imports: [
     CommonModule,
-    ResumeRoutingModule
+    ResumeRoutingModule,
+    SharedModule
   ]
 })
 export class ResumeModule { }
