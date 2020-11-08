@@ -1,4 +1,4 @@
-/* const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 module.exports = {
   plugins: [
@@ -16,6 +16,4 @@ module.exports = {
       minRatio: 0.7
     })
   ]
-} */
-
-module.exports = {}
+}
