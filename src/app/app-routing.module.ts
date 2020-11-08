@@ -13,19 +13,17 @@ const routes: Routes = [{
   component: HomeComponent,
 }, {
   path: 'about-us',
-  component: AboutComponent,
+  loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule)
 }, {
   path: 'resume',
-  component: ResumeComponent,
-},
-{
-  path: 'awards',
-  component: AwardsComponent,
+  loadChildren: () => import('./pages/resume/resume.module').then(m => m.ResumeModule)
 },
 {
   path: 'portfolio',
-  component: PortfolioComponent,
+  loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule)
 },
+{ path: 'awards', loadChildren: () => import('./pages/awards/awards.module').then(m => m.AwardsModule) },
+
 { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
