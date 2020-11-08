@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604852961550,
+  "timestamp": 1604854315205,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -40,6 +40,13 @@
         "ignoreVary": true
       },
       "urls": [
+        "/assets/icons/android-chrome-192x192.png",
+        "/assets/icons/android-chrome-512x512.png",
+        "/assets/icons/apple-touch-icon.png",
+        "/assets/icons/favicon-16x16.png",
+        "/assets/icons/favicon-32x32.png",
+        "/assets/icons/mstile-150x150.png",
+        "/assets/icons/safari-pinned-tab.svg",
         "/assets/images/butter.png",
         "/fa-brands-400.0fea24969112a781acd2.eot",
         "/fa-brands-400.c967a94cfbe2b06627ff.woff2",
@@ -70,6 +77,13 @@
     "/7-es5.ca6837e18c1b666a285d.js": "50d4c59b76d1ef4b77bd234c01f0df6b8f851358",
     "/8-es2015.d251d23b8bb04a209df9.js": "56711e8bb99c6f1aa17c8745ef1f562f3a01c973",
     "/8-es5.d251d23b8bb04a209df9.js": "49fddc1c7857c13acf670d2122a6aeacf132759b",
+    "/assets/icons/android-chrome-192x192.png": "3cd673c12c0ce2a0d3f5da1fe52c4f4620f06df6",
+    "/assets/icons/android-chrome-512x512.png": "eea66e6c341bf1b6007aa5222eead313331340e9",
+    "/assets/icons/apple-touch-icon.png": "31d322f7e927808f3103d668ff6c9d22b7b7da0f",
+    "/assets/icons/favicon-16x16.png": "94001dcd0b53c90083237681bf113b5d714f46b0",
+    "/assets/icons/favicon-32x32.png": "ffe436a5fd36797f14caed28e891c074c0ce328d",
+    "/assets/icons/mstile-150x150.png": "0636dd3479c2b3892986241557fe70ff51b3886e",
+    "/assets/icons/safari-pinned-tab.svg": "b133e7d0894e0b21e9c1beb485062dc4ef884ada",
     "/assets/images/butter.png": "6afc6c1cf4b7dcb37c61a7996de80d8d938e6052",
     "/fa-brands-400.0fea24969112a781acd2.eot": "c719f4375679ee58e156434f9ba9727be669cf07",
     "/fa-brands-400.c967a94cfbe2b06627ff.woff2": "f726c4275bb494a045fde059175f072de06c01df",
@@ -86,7 +100,7 @@
     "/fa-solid-900.3a24a60e7f9c6574864a.eot": "c39b89f7fa7b66931ab02a54002db5ffcbff206c",
     "/fa-solid-900.3ceb50e7bcafb577367c.woff2": "9b592048b9062b00f0b2dd782d70a95b7dc69b83",
     "/fa-solid-900.46fdbd2d897f8824e63c.woff": "3b86a0ce15d8d534b65e98560e321a933d310688",
-    "/favicon.ico": "a788f30a76afe626262495725093802cc55b2a71",
+    "/favicon.ico": "c3c1192704689dddb2315364a2b8edbf0f488985",
     "/index.html": "5b358d079a5fb3ce04ba97a0cc40473755275b77",
     "/main-es2015.6a5a0c2d6c44168a6acf.js": "b5a220ab52edecde45bd58803de58900a451cc27",
     "/main-es5.6a5a0c2d6c44168a6acf.js": "3400d8a6750191c5b61f60d59d7280434cb3c43c",
