@@ -1,0 +1,17 @@
+<mat-card *ngFor="let publication of publications"
+          class="border-card"
+          fxFlex="100">
+  <mat-card-header>
+    <img mat-card-avatar
+         class="image"
+         [src]="publication.editorial_logo">
+    <mat-card-title>{{publication.title}}</mat-card-title>
+    <mat-card-subtitle>{{publication.publication_date | date: 'yyyy'}}
+    </mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-card-content>
+    {{publication.description}}
+  </mat-card-content>
+
+</mat-card>

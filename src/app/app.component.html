@@ -11,45 +11,10 @@
   <mat-drawer #snav
               [opened]="!mobileQuery.matches"
               [mode]="mobileQuery.matches ? 'over' : 'side'">
-    <div fxFlex
-         fxLayout="column"
-         fxLayoutAlign="space-around center">
-      <div fxLayout="column"
-           fxLayoutAlign="center center">
-        <img [src]="me.profile"
-             alt="Profile"
-             class="responsive-image">
-
-        <h1 class="name">{{me.name}}</h1>
-        <span class="position">{{me.position}}</span>
-        <span class="place">{{me.place}}</span>
-      </div>
-
-      <mat-nav-list>
-        <a *ngFor="let nav of sidenav"
-           class="nav-list"
-           mat-list-item
-           [routerLink]="nav.ref"
-           routerLinkActive="link-active">{{ nav.title }}</a>
-
-      </mat-nav-list>
-
-
-      <div>
-        <div fxLayout="row"
-             class="full-width"
-             fxLayoutAlign="space-between center">
-
-          <span>Powered By</span>
-          <img class="img-responsive"
-               src="/assets/images/butter.png">
-        </div>
-        <br>
-        <p>© Copyright 2020 All rights reserved.</p>
-      </div>
-    </div>
+    <app-sidenav-menu></app-sidenav-menu>
   </mat-drawer>
   <mat-drawer-content>
     <router-outlet></router-outlet>
+
   </mat-drawer-content>
 </mat-drawer-container>

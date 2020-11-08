@@ -18,34 +18,3 @@ mat-drawer {
 mat-drawer-content {
   padding: 0 80px;
 }
-
-
-
-.responsive-image {
-  width        : 100%;
-  max-width    : 200px;
-  height       : auto;
-  border-radius: 50%;
-  margin-top   : 1em;
-  margin-bottom: 1em;
-}
-
-.name {
-  font-weight  : bold;
-  margin-bottom: .5em;
-
-  font-size: 22px;
-}
-
-.position {
-  text-align    : center;
-  font-size     : 14px;
-  text-transform: uppercase;
-  margin-bottom : .5em;
-}
-
-.place {
-  font-size     : 12px;
-  text-transform: uppercase;
-  margin-bottom : 2em;
-}

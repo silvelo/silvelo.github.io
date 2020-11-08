@@ -44,6 +44,7 @@ declare interface IPublication {
 declare interface ISocialNetwork {
   social_url: string;
   social_icon: string;
+  fontset: string;
 }
 
 declare interface ISidenav {

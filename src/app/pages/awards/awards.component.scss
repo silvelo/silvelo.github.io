@@ -1,7 +1,6 @@
 :host {
   flex-direction: column;
   box-sizing    : border-box;
-  place-content : center center;
   display       : flex;
   height        : 100%;
   padding-top   : 10px;
@@ -11,10 +10,5 @@
 h1 {
   font-size  : 28px;
   font-weight: 600;
-}
-
-.text {
-  font-size  : 15px;
-  font-family: poppins, Helvetica, sans-serif;
-  line-height: 1.65em;
+  margin-top : 15px
 }

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
+import { AwardsComponent } from './pages/awards/awards.component';
 import { HomeComponent } from './pages/home/home.component';
-import { EducationComponent } from './pages/education/education.component';
-import { ExperienceComponent } from './pages/experience/experience.component';
+
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { ResumeComponent } from './pages/resume/resume.component';
 
 
 const routes: Routes = [{
@@ -14,11 +15,12 @@ const routes: Routes = [{
   path: 'about-us',
   component: AboutComponent,
 }, {
-  path: 'education',
-  component: EducationComponent,
-}, {
-  path: 'experience',
-  component: ExperienceComponent,
+  path: 'resume',
+  component: ResumeComponent,
+},
+{
+  path: 'awards',
+  component: AwardsComponent,
 },
 {
   path: 'portfolio',

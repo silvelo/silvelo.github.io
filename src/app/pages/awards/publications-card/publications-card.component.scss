@@ -1,0 +1,20 @@
+:host {
+  flex-direction: row;
+  flex-wrap     : wrap;
+  box-sizing    : border-box;
+  place-content : space-between;
+  display       : flex;
+}
+
+.border-card {
+  margin: 5px
+}
+
+.image {
+  height       : auto;
+  max-height   : 50px;
+  width        : 100%;
+  max-width    : 80px;
+  border-radius: 0;
+  object-fit   : unset;
+}

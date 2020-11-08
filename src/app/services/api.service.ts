@@ -5,10 +5,10 @@ import Butter from 'buttercms';
   providedIn: 'root'
 })
 export class ApiService {
-  private _butterService = null;
-  constructor() {
-    this._butterService = Butter('fed7d717ce0e71dd943cba17237589d3eaafb275');
+  private butterService = null;
 
+  constructor() {
+    this.butterService = Butter('fed7d717ce0e71dd943cba17237589d3eaafb275');
   }
 
   async getEducation(): Promise<IEducation[]> {
@@ -61,8 +61,7 @@ export class ApiService {
     return res.data.data.portfolio;
   }
 
-
   async getContent(content: string[]) {
-    return await this._butterService.content.retrieve(content);
+    return await this.butterService.content.retrieve(content);
   }
 }

@@ -5,30 +5,27 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ListExperienceComponent } from './list-experience/list-experience.component';
-import { ListEducationComponent } from './list-education/list-education.component';
-import { ListCertificationComponent } from './list-certification/list-certification.component';
-import { ListAwardsComponent } from './list-awards/list-awards.component';
-import { ListPublicationsComponent } from './list-publications/list-publications.component';
+
 import { TimeToPipe } from '../pipes/time-to.pipe';
-import { ListPortfolioComponent } from './list-portfolio/list-portfolio.component';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
+
+import { SidenavMenuComponent } from './sidenav-menu/sidenav-menu.component';
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
-    ListExperienceComponent,
-    ListEducationComponent,
-    ListCertificationComponent,
-    ListAwardsComponent,
-    ListPublicationsComponent,
+    SidenavMenuComponent,
     TimeToPipe,
-    ListPortfolioComponent
   ],
   imports: [
     CommonModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule,
+    MatIconModule
   ],
   exports: [
     MatSidenavModule,
@@ -37,14 +34,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatCardModule,
     MatToolbarModule,
-    ListExperienceComponent,
-    ListEducationComponent,
-    ListCertificationComponent,
-    ListAwardsComponent,
-    ListPortfolioComponent,
-    ListPublicationsComponent,
-    TimeToPipe,
-    MatButtonModule
+    MatButtonModule,
+    SidenavMenuComponent,
+    TimeToPipe
   ]
 })
 export class SharedModule { }

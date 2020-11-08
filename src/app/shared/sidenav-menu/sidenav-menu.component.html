@@ -1,0 +1,43 @@
+<div>
+     <div fxLayoutAlign="center center">
+          <img [src]="me.profile"
+               alt="Profile"
+               class="responsive-image">
+     </div>
+     <div fxLayout="row wrap"
+          fxLayoutAlign="center center">
+          <h1>Arturo Silvelo</h1>
+          <h4>Javascript Fullstack Developer</h4>
+     </div>
+
+     <div fxLayout="row wrap"
+          fxLayoutAlign="space-around center">
+          <a mat-icon-button
+             [href]="social.social_url"
+             target="_blank"
+             *ngFor="let social of socialNetworks">
+               <mat-icon class="md-24"
+                         [fontSet]="social.fontset"
+                         [fontIcon]="social.social_icon"></mat-icon>
+          </a>
+     </div>
+</div>
+
+<div>
+     <mat-nav-list>
+          <a *ngFor="let nav of sidenav"
+             class="nav-list"
+             mat-list-item
+             [routerLink]="nav.ref"
+             routerLinkActive="link-active">{{ nav.title }}</a>
+     </mat-nav-list>
+</div>
+
+<div>
+     <div fxLayoutAlign="center center">
+          <span>Power By</span>
+          <img class="img-responsive"
+               src="/assets/images/butter.png">
+     </div>
+     <p class="copyrigth">© Copyright 2020 All rights reserved.</p>
+</div>
