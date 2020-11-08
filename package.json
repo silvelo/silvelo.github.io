@@ -11,7 +11,8 @@
     "deploy": "npm run build:prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "stats": "ng build --statsJson=true && webpack-bundle-analyzer ./dist/silvelo/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +45,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "angular-http-server": "^1.9.0",
+    "brotli-gzip-webpack-plugin": "^0.5.0",
     "brotli-webpack-plugin": "^1.1.0",
     "codelyzer": "^6.0.0",
     "compression-webpack-plugin": "^6.0.5",
@@ -65,6 +67,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.9.7"
+    "typescript": "~3.9.7",
+    "webpack-bundle-analyzer": "^4.1.0"
   }
 }
