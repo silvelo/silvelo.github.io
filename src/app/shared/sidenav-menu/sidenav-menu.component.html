@@ -13,6 +13,7 @@
      <div fxLayout="row wrap"
           fxLayoutAlign="space-around center">
           <a mat-icon-button
+             [attr.aria-label]="social.social_icon"
              [href]="social.social_url"
              target="_blank"
              *ngFor="let social of socialNetworks">
