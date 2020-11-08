@@ -17,6 +17,7 @@
              target="_blank"
              *ngFor="let social of socialNetworks">
                <mat-icon class="md-24"
+                         [inline]="true"
                          [fontSet]="social.fontset"
                          [fontIcon]="social.social_icon"></mat-icon>
           </a>
