@@ -8,7 +8,7 @@
     "optimizecss": "gulp --gulpfile build-scripts/optimize-css.gulpfile.js",
     "build:prod": "ng build --prod",
     "start:prod": "npm run build:prod && angular-http-server --path dist/silvelo -o",
-    "deploy": "npm run build:prod && npm run optimizecss",
+    "deploy": "npm run build:prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
