@@ -14,7 +14,7 @@ export class AppComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
 
 
-  private _mobileQueryListener: () => void;
+  private mobileQueryListener: () => void;
 
   constructor(
     private router: Router,
@@ -31,12 +31,12 @@ export class AppComponent implements OnDestroy {
       });
 
     this.mobileQuery = media.matchMedia('(max-width: 720px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addEventListener('change', this.mobileQueryListener.bind(this));
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.mobileQuery.removeEventListener('change', this.mobileQueryListener);
   }
 
 
