@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "copy": "copy-files-from-to",
     "start": "ng serve",
     "build": "ng build",
     "optimizecss": "gulp --gulpfile build-scripts/optimize-css.gulpfile.js",
     "build:prod": "ng build --prod",
-    "start:prod": "npm run build:prod && angular-http-server --path dist/silvelo -o",
-    "deploy": "npm run build:prod",
+    "start:prod": "npm run build:prod && npm run copy && angular-http-server --path dist/silvelo -o",
+    "deploy": "npm run build:prod && npm run copy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -48,6 +49,7 @@
     "brotli-webpack-plugin": "^1.1.0",
     "codelyzer": "^6.0.0",
     "compression-webpack-plugin": "^6.0.5",
+    "copy-files-from-to": "^3.2.0",
     "gulp": "^4.0.2",
     "gulp-brotli": "^3.0.0",
     "gulp-clean": "^0.4.0",
@@ -69,5 +71,11 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.7",
     "webpack-bundle-analyzer": "^4.1.0"
-  }
+  },
+  "copyFiles": [
+    {
+      "from": "dist/silvelo/index.html",
+      "to": "dist/silvelo/404.html"
+    }
+  ]
 }
