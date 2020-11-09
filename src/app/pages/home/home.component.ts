@@ -18,8 +18,10 @@ export class HomeComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.titleService.setTitle('Silveo Portfolio');
-    this.metaTagService.updateTag({ name: 'description', content: 'Soy Arturo Silvelo desarrollador JS Fullstack' });
+    this.titleService.setTitle('Arturo Silvelo | Portfolio');
+    this.metaTagService.updateTag({ name: 'description', content: 'Soy Arturo Silvelo desarrollador JS Fullstack entra para más información sobre mí.' });
+    this.metaTagService.updateTag({ name: 'robots', content: 'index, follow' });
+    this.metaTagService.updateTag({ name: 'keywords', content: 'silvelo, personal, resume, angular, javascript, typescript, developer' });
     this.me = await this.apiService.getAbout();
 
   }
