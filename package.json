@@ -45,7 +45,6 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "angular-http-server": "^1.9.0",
-    "brotli-gzip-webpack-plugin": "^0.5.0",
     "brotli-webpack-plugin": "^1.1.0",
     "codelyzer": "^6.0.0",
     "compression-webpack-plugin": "^6.0.5",
