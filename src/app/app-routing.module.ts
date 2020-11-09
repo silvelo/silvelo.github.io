@@ -20,14 +20,12 @@ const routes: Routes = [{
 },
 { path: 'awards', loadChildren: () => import('./pages/awards/awards.module').then(m => m.AwardsModule) },
 
-{ path: '**', redirectTo: '/', pathMatch: 'full' },
+{ path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {
-      scrollPositionRestoration: 'top', useHash: true,
-    })
+    RouterModule.forRoot(routes)
   ],
   exports: [
     RouterModule

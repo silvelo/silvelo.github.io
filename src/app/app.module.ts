@@ -10,7 +10,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Angulartics2Module } from 'angulartics2';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -28,7 +27,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     Angulartics2Module.forRoot()
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+
   ],
   bootstrap: [AppComponent]
 })
