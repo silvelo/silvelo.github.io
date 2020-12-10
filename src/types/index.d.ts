@@ -13,6 +13,7 @@ declare interface IAward {
   description: string;
   expedition: Date;
   issuer_logo: string;
+  certificate_url: string;
 }
 declare interface IExperience {
   position: string;
@@ -39,6 +40,7 @@ declare interface IPublication {
   publication_url: string;
   description: string;
   editorial_logo: string;
+  certificate_url: string;
 }
 
 declare interface ISocialNetwork {

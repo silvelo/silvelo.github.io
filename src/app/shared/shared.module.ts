@@ -1,38 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-
 
 import { SidenavMenuComponent } from './sidenav-menu/sidenav-menu.component';
 import { RouterModule } from '@angular/router';
 
+import { MaterialModule } from '../material/material.module';
+import { AccordionItemComponent } from './accordion-item/accordion-item.component';
+import { AccordionContentComponent } from './accordion-content/accordion-content.component';
+
 @NgModule({
   declarations: [
     SidenavMenuComponent,
+    AccordionItemComponent,
+    AccordionContentComponent,
   ],
   imports: [
     CommonModule,
-    MatListModule,
     FlexLayoutModule,
     RouterModule,
-    MatIconModule
+    MaterialModule
   ],
   exports: [
-    MatSidenavModule,
-    FlexLayoutModule,
-    MatListModule,
-    MatIconModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatButtonModule,
-    SidenavMenuComponent
+    SidenavMenuComponent,
+    AccordionItemComponent,
+    AccordionContentComponent,
+    MaterialModule,
   ]
 })
 export class SharedModule { }

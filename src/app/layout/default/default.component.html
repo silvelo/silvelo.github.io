@@ -1,0 +1,21 @@
+<mat-toolbar *ngIf="mobileQuery.matches">
+  <button mat-icon-button
+          aria-label="menu"
+          (click)="snav.toggle()">
+    <mat-icon fontSet="fas"
+              [inline]="true"
+              fontIcon="fa-bars"></mat-icon>
+
+  </button>
+
+</mat-toolbar>
+<mat-drawer-container>
+  <mat-drawer #snav
+              [opened]="!mobileQuery.matches"
+              [mode]="mobileQuery.matches ? 'over' : 'side'">
+    <app-sidenav-menu></app-sidenav-menu>
+  </mat-drawer>
+  <mat-drawer-content>
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>

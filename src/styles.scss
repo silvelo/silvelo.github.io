@@ -65,7 +65,38 @@ a .mat-icon {
   font-size: 48px;
 }
 
+mat-accordion {
+  width: 100%;
+}
 
+.mat-expansion-panel-header {
+
+  padding-left: 0 !important;
+}
+
+
+
+.mat-expansion-panel-header-description {
+  color      : initial;
+  font-weight: bold;
+  font-size  : 18px;
+}
+
+.mat-accordion .mat-expansion-panel {
+  margin: 1em 0;
+
+}
+
+.mat-expansion-panel-header[aria-disabled=true] {
+  color: rgba(0, 0, 0, .87);
+}
+
+
+.calendar {
+  color      : initial;
+  font-weight: 400;
+  font-size  : 16px;
+}
 
 @media (max-width: 400px) {
   .list-image {

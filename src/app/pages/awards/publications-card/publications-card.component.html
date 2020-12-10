@@ -1,17 +1,12 @@
-<mat-card *ngFor="let publication of publications"
-          class="border-card"
-          fxFlex="100">
-  <mat-card-header>
-    <img mat-card-avatar
-         class="image"
-         [src]="publication.editorial_logo">
-    <mat-card-title>{{publication.title}}</mat-card-title>
-    <mat-card-subtitle>{{publication.publication_date | date: 'yyyy'}}
-    </mat-card-subtitle>
+<mat-accordion>
+  <app-accordion-item *ngFor="let publication of publications"
+                      [logo]="publication.editorial_logo"
+                      [title]="publication.title"
+                      [showEndDate]="false"
+                      [showExpand]="publication.publication_url"
+                      [startDate]="publication.publication_date">
 
-  </mat-card-header>
-  <mat-card-content>
-    {{publication.description}}
-  </mat-card-content>
-
-</mat-card>
+    <app-accordion-content [publication_url]="publication.publication_url"
+                           [certificate_url]="publication.certificate_url"></app-accordion-content>
+  </app-accordion-item>
+</mat-accordion>

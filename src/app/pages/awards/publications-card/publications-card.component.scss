@@ -6,10 +6,6 @@
   display       : flex;
 }
 
-.border-card {
-  margin: 5px
-}
-
 .image {
   height       : auto;
   max-height   : 50px;
@@ -17,4 +13,9 @@
   max-width    : 80px;
   border-radius: 0;
   object-fit   : unset;
+}
+
+.mat-accordion .mat-expansion-panel {
+  height: 80px;
+
 }

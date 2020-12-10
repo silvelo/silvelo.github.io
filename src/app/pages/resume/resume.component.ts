@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
-import { ApiService } from 'src/app/services/api.service';
+import { ApiService } from 'src/app/core/services/api.service';
+
 
 @Component({
   selector: 'app-resume',

@@ -1,0 +1,11 @@
+<h1>Portfolio</h1>
+<mat-divider></mat-divider>
+
+<div fxLayout="row wrap"
+     fxLayoutAlign="space-around center">
+  <app-portfolio-card fxFlex="33"
+                      fxFlex.lt-lg="50"
+                      fxFlex.lt-sm="100"
+                      *ngFor="let portfolio of portfolios"
+                      [portfolio]="portfolio"></app-portfolio-card>
+</div>

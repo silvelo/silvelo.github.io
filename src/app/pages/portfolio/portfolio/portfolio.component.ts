@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { ApiService } from 'src/app/core/services/api.service';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
-  portfolio: IPortfolio[] = [];
+  portfolios: IPortfolio[] = [];
 
   constructor(
     private apiService: ApiService,
@@ -20,7 +20,7 @@ export class PortfolioComponent implements OnInit {
   async ngOnInit() {
     this.titleService.setTitle('Silveo Portfolio');
     this.metaTagService.updateTag({ name: 'description', content: 'Soy Arturo Silvelo desarrollador JS Fullstack' });
-    this.portfolio = await this.apiService.getPortfolio();
+    this.portfolios = await this.apiService.getPortfolio();
   }
 
 }

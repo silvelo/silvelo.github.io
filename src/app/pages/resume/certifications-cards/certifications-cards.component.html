@@ -1,22 +1,10 @@
-<mat-card *ngFor="let certification of certifications"
-          class="border-card"
-          fxFlex="47"
-          fxFlex.lt-lg="100">
-  <mat-card-header>
-    <img mat-card-avatar
-         [src]="certification.company_logo">
-    <mat-card-title>{{certification.title}}</mat-card-title>
-    <mat-card-subtitle>{{certification.expedition | date: 'yyyy'}}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-actions align="end">
-    <a mat-raised-button
-       target="_blank"
-       rel="noreferrer"
-       [href]="certification.credential_url">
-      <span>Ver </span>
-      <mat-icon fontSet="fas"
-                [inline]="true"
-                fontIcon="fa-eye"></mat-icon>
-    </a>
-  </mat-card-actions>
-</mat-card>
+<mat-accordion>
+  <app-accordion-item *ngFor="let certification of certifications"
+                      [logo]="certification.company_logo"
+                      [title]="certification.title"
+                      [showEndDate]="false"
+                      [showExpand]="true"
+                      [startDate]="certification.expedition">
+    <app-accordion-content [certificate_url]="certification.credential_url"></app-accordion-content>
+  </app-accordion-item>
+</mat-accordion>
