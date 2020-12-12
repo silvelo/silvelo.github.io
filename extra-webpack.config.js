@@ -13,7 +13,7 @@ module.exports = {
       keyframes: true,
       variables: true,
       safelist: {
-        standard: ['fa-npm', 'fa-github', 'fa-envelope', 'fa-twitter', 'fa-linkedin']
+        standard: ['fas', 'fab', 'fa-npm', 'fa-github', 'fa-envelope', 'fa-twitter', 'fa-linkedin']
       }
     }),
 
