@@ -12,6 +12,9 @@ module.exports = {
       fontFace: true,
       keyframes: true,
       variables: true,
+      safelist: {
+        standard: ['fa-npm', 'fa-github', 'fa-envelope', 'fa-twitter', 'fa-linkedin']
+      }
     }),
 
     new BrotliPlugin({
