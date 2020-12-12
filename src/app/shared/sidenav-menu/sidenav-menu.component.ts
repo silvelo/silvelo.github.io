@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ApiService } from 'src/app/core/services/api.service';
 
 
@@ -8,6 +8,8 @@ import { ApiService } from 'src/app/core/services/api.service';
   styleUrls: ['./sidenav-menu.component.scss']
 })
 export class SidenavMenuComponent implements OnInit {
+  @Output() selectItem = new EventEmitter();
+
   sidenav: ISidenav[] = [];
   me: IMeInfo = {} as IMeInfo;
   socialNetworks: ISocialNetwork[] = [];
@@ -19,5 +21,4 @@ export class SidenavMenuComponent implements OnInit {
     this.me = await this.apiService.getAbout();
     this.socialNetworks = await this.apiService.getSocial();
   }
-
 }

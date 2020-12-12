@@ -28,6 +28,7 @@
 <div>
      <mat-nav-list>
           <a *ngFor="let nav of sidenav"
+             (click)="selectItem.emit()"
              class="nav-list"
              mat-list-item
              [routerLink]="nav.ref"

@@ -13,7 +13,7 @@
   <mat-drawer #snav
               [opened]="!mobileQuery.matches"
               [mode]="mobileQuery.matches ? 'over' : 'side'">
-    <app-sidenav-menu></app-sidenav-menu>
+    <app-sidenav-menu (selectItem)="mobileQuery.matches ? snav.close() : null"></app-sidenav-menu>
   </mat-drawer>
   <mat-drawer-content>
     <ng-content></ng-content>
