@@ -1,11 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { PreloadAllModules } from '@angular/router';
+import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: ContentLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./modules/home/home.module').then(m => m.HomeModule)
+      }
+    ]
+  },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 
-const routes: Routes = [{
-  path: '',
+  /* {path: '',
   component: HomeComponent,
 }, {
   path: 'about-us',
@@ -21,14 +32,13 @@ const routes: Routes = [{
 { path: 'awards', loadChildren: () => import('./pages/awards/awards.module').then(m => m.AwardsModule) },
 
 { path: '**', redirectTo: '', pathMatch: 'full' },
+
+
+ */
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

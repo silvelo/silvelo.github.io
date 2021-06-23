@@ -2,30 +2,30 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { SidenavMenuComponent } from './sidenav-menu/sidenav-menu.component';
 import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../material/material.module';
-import { AccordionItemComponent } from './accordion-item/accordion-item.component';
-import { AccordionContentComponent } from './accordion-content/accordion-content.component';
+
+import {
+  FontAwesomeModule,
+  FaIconLibrary
+} from '@fortawesome/angular-fontawesome';
+import { faGithub, faNpm, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
-  declarations: [
-    SidenavMenuComponent,
-    AccordionItemComponent,
-    AccordionContentComponent,
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     FlexLayoutModule,
     RouterModule,
-    MaterialModule
-  ],
-  exports: [
-    SidenavMenuComponent,
-    AccordionItemComponent,
-    AccordionContentComponent,
     MaterialModule,
-  ]
+    FontAwesomeModule
+  ],
+  exports: [CommonModule, MaterialModule, FlexLayoutModule, FontAwesomeModule]
 })
-export class SharedModule { }
+export class SharedModule {
+  constructor(faIconLibrary: FaIconLibrary) {
+    faIconLibrary.addIcons(faGithub, faNpm, faTwitter, faEnvelope);
+  }
+}

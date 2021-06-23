@@ -1,1 +1,46 @@
-<p>sidenav works!</p>
+<mat-card>
+    <mat-card-header fxLayout="column"
+                     fxLayoutAlign="center center">
+        <img mat-card-avatar
+             [src]="me.profile">
+        <mat-card-title fxLayoutAlign="center center">{{me.name}}</mat-card-title>
+        <mat-card-subtitle fxLayoutAlign="center center">{{me.position}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayout="row"
+                      fxLayoutAlign="space-between center">
+        <a mat-icon-button
+           *ngFor="let social of socialNetworks"
+           target="_blank">
+            <fa-icon [icon]="['fab','github']"
+                     size="2x"></fa-icon>
+        </a>
+    </mat-card-actions>
+</mat-card>
+
+
+
+<mat-nav-list fxLayout="column"
+              fxLayoutGap="5px">
+    <a mat-list-item
+       [ngClass]="{'active-link': this.url === nav.ref}"
+       *ngFor="let nav of sidenav">
+        <div fxLayout="row"
+             fxLayoutGap="20px"
+             fxLayoutAlign="start center">
+            <fa-icon [icon]="['fab','github']"
+                     size="2x"></fa-icon>
+            <span>{{nav.title}}</span>
+
+        </div>
+    </a>
+</mat-nav-list>
+
+<div fxLayout="column"
+     fxLayoutAlign="center center">
+    <div fxLayoutAlign="center center">
+        <span>Power By</span>
+        <img class="img-responsive"
+             src="/assets/images/butter.png">
+    </div>
+    <p class="copyrigth">© Copyright 2020 All rights reserved.</p>
+</div>
