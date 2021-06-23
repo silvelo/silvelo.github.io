@@ -9,14 +9,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatDividerModule } from '@angular/material/divider';
-
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-  ], exports: [
+  imports: [CommonModule],
+  exports: [
     MatSidenavModule,
     FlexLayoutModule,
     MatListModule,
@@ -25,7 +23,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatToolbarModule,
     MatButtonModule,
     MatExpansionModule,
-    MatDividerModule,
+    MatMenuModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}

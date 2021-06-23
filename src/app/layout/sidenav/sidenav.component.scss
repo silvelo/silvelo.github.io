@@ -6,6 +6,8 @@
     flex-direction: column;
     padding: 20px 0;
     background-color: #e10098;
+    width: 300px;
+    min-width: 250px;
 }
 
 .active-link{
@@ -20,7 +22,6 @@
 
 .mat-card {
     background-color: #e10098;
-    box-shadow: none;
 }
 
 .mat-card-avatar{

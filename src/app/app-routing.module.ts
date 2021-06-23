@@ -8,13 +8,30 @@ const routes: Routes = [
     component: ContentLayoutComponent,
     children: [
       {
-        path: '',
+        path: 'home',
         loadChildren: () =>
           import('./modules/home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path: 'about-us',
+        loadChildren: () =>
+          import('./modules/about/about.module').then(m => m.AboutModule)
+      },
+      {
+        path: 'portfolio',
+        loadChildren: () =>
+          import('./modules/portfolio/portfolio.module').then(
+            m => m.PortfolioModule
+          )
+      },
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
       }
     ]
   },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 
   /* {path: '',
   component: HomeComponent,

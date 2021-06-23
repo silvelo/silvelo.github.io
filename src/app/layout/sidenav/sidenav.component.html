@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="mat-elevation-z0">
     <mat-card-header fxLayout="column"
                      fxLayoutAlign="center center">
         <img mat-card-avatar
@@ -10,8 +10,9 @@
                       fxLayoutAlign="space-between center">
         <a mat-icon-button
            *ngFor="let social of socialNetworks"
+           [href]="social.url"
            target="_blank">
-            <fa-icon [icon]="['fab','github']"
+            <fa-icon [icon]="[social.prefix, social.icon]"
                      size="2x"></fa-icon>
         </a>
     </mat-card-actions>
@@ -22,25 +23,22 @@
 <mat-nav-list fxLayout="column"
               fxLayoutGap="5px">
     <a mat-list-item
+       [routerLink]="[nav.ref]"
        [ngClass]="{'active-link': this.url === nav.ref}"
        *ngFor="let nav of sidenav">
         <div fxLayout="row"
              fxLayoutGap="20px"
              fxLayoutAlign="start center">
-            <fa-icon [icon]="['fab','github']"
+            <fa-icon [icon]="[nav.prefix, nav.icon]"
                      size="2x"></fa-icon>
             <span>{{nav.title}}</span>
-
         </div>
     </a>
 </mat-nav-list>
 
-<div fxLayout="column"
+<div fxLayout="row"
      fxLayoutAlign="center center">
-    <div fxLayoutAlign="center center">
-        <span>Power By</span>
-        <img class="img-responsive"
-             src="/assets/images/butter.png">
-    </div>
-    <p class="copyrigth">© Copyright 2020 All rights reserved.</p>
+    <span>Power By</span>
+    <img class="img-responsive"
+         src="/assets/images/butter.png">
 </div>

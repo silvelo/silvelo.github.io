@@ -1,4 +1,3 @@
-
 declare interface IEducation {
   degree: string;
   start_date: string;
@@ -44,9 +43,9 @@ declare interface IPublication {
 }
 
 declare interface ISocialNetwork {
-  social_url: string;
-  social_icon: string;
-  fontset: string;
+  url: string;
+  prefix: string;
+  icon: string;
 }
 
 declare interface ISidenav {
