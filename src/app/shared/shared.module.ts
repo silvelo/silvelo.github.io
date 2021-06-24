@@ -29,9 +29,10 @@ import {
   faUserGraduate,
   faUserTie
 } from '@fortawesome/free-solid-svg-icons';
+import { InfoTitleComponent } from './comonent/info-title/info-title.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [InfoTitleComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -39,7 +40,13 @@ import {
     MaterialModule,
     FontAwesomeModule
   ],
-  exports: [CommonModule, MaterialModule, FlexLayoutModule, FontAwesomeModule]
+  exports: [
+    CommonModule,
+    MaterialModule,
+    FlexLayoutModule,
+    FontAwesomeModule,
+    InfoTitleComponent
+  ]
 })
 export class SharedModule {
   constructor(faIconLibrary: FaIconLibrary) {

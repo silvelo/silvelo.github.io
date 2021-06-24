@@ -1,10 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {
-  MatSnackBarConfig,
-  _SnackBarContainer
-} from '@angular/material/snack-bar';
 
-export declare type PanelTypes = 'experience' | 'education' | 'certificate';
+export declare type PanelTypes = 'award' | 'publication';
 
 @Component({
   selector: 'app-panel-list',
