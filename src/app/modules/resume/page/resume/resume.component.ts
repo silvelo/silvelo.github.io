@@ -16,11 +16,14 @@ export class ResumeComponent implements OnInit {
     private apiService: ApiService,
     private titleService: Title,
     private metaTagService: Meta
-  ) { }
+  ) {}
 
   async ngOnInit() {
     this.titleService.setTitle('Silveo Portfolio');
-    this.metaTagService.updateTag({ name: 'description', content: 'Soy Arturo Silvelo desarrollador JS Fullstack' });
+    this.metaTagService.updateTag({
+      name: 'description',
+      content: 'Soy Arturo Silvelo desarrollador JS Fullstack'
+    });
     this.education = await this.apiService.getEducation();
     this.experience = await this.apiService.getExperience();
     this.certifications = await this.apiService.getCertification();

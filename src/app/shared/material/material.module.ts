@@ -61,4 +61,4 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatStepperModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}
