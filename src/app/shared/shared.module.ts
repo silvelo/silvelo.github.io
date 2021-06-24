@@ -25,7 +25,9 @@ import {
   faHome,
   faLink,
   faQuestionCircle,
-  faUserGraduate
+  faScroll,
+  faUserGraduate,
+  faUserTie
 } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -57,7 +59,9 @@ export class SharedModule {
       faBars,
       faCalendar,
       faAward,
-      faUserGraduate
+      faUserGraduate,
+      faScroll,
+      faUserTie
     );
   }
 }

@@ -5,12 +5,10 @@ import { MediaMatcher } from '@angular/cdk/layout';
 @Component({
   selector: 'app-content-layout',
   templateUrl: './content-layout.component.html',
-  styleUrls: ['./content-layout.component.scss'],
+  styleUrls: ['./content-layout.component.scss']
 })
 export class ContentLayoutComponent {
-
   mobileQuery: MediaQueryList;
-
 
   private mobileQueryListener: () => void;
 
@@ -19,10 +17,12 @@ export class ContentLayoutComponent {
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher
   ) {
-
-    this.mobileQuery = media.matchMedia('(max-width: 990px)');
+    this.mobileQuery = media.matchMedia('(max-width: 959px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addEventListener('change', this.mobileQueryListener.bind(this));
+    this.mobileQuery.addEventListener(
+      'change',
+      this.mobileQueryListener.bind(this)
+    );
   }
 
   ngOnDestroy(): void {

@@ -1,52 +1,37 @@
-<mat-card class="mat-elevation-z0">
-    <mat-card-header>
-        <mat-card-title>
-            Mis proyectos
-        </mat-card-title>
-        <mat-card-subtitle>
-            Aquí podrás encontrar una lista de los proyectos públicos en los que he participado y creado.
-        </mat-card-subtitle>
+<mat-card *ngFor="let portfolio of portfolios"
+          fxFlex.lt-xl="24"
+          fxFlex.lt-lg="32"
+          fxFlex.lt-md="44"
+          fxFlex.lt-sm="100"
+          class="mat-elevation-z8">
+    <mat-card-header fxLayout="row"
+                     fxLayoutAlign="start center">
+        <img mat-card-avatar
+             [src]="portfolio.image">
+        <mat-card-title fxLayout="row"
+                        fxLayoutAlign="center center">{{portfolio.title}}</mat-card-title>
     </mat-card-header>
-    <mat-card-content fxLayout="row wrap"
-                      fxLayoutAlign="start center">
-
-
-        <mat-card *ngFor="let portfolio of portfolios"
-                  fxFlex="100"
-                  fxFlex.gt-lg="23"
-                  fxFlex.gt-md="30"
-                  fxFlex.gt-sm="45"
-                  class="mat-elevation-z8">
-            <mat-card-header fxLayout="row"
-                             fxLayoutAlign="start center">
-                <img mat-card-avatar
-                     [src]="portfolio.image">
-                <mat-card-title fxLayout="row"
-                                fxLayoutAlign="center center">{{portfolio.title}}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus recusandae quis aspernatur
-                corrupti
-                maiores beatae aliquid optio rem dolorum architecto fuga voluptate iure facere, quae deserunt velit
-                facilis
-                tempore soluta?
-            </mat-card-content>
-            <mat-card-actions fxLayout="row"
-                              fxLayoutGap="10px"
-                              fxLayoutAlign="end center">
-                <a mat-icon-button
-                   [href]="portfolio.url"
-                   target="_blank">
-                    <fa-icon [icon]="['fas','link']"
-                             size='2x'></fa-icon>
-                </a>
-                <a mat-icon-button
-                   [href]="portfolio.url"
-                   target="_blank">
-                    <fa-icon [icon]="['fab','github']"
-                             size='2x'></fa-icon>
-                </a>
-            </mat-card-actions>
-        </mat-card>
+    <mat-card-content>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus recusandae quis aspernatur
+        corrupti
+        maiores beatae aliquid optio rem dolorum architecto fuga voluptate iure facere, quae deserunt velit
+        facilis
+        tempore soluta?
     </mat-card-content>
+    <mat-card-actions fxLayout="row"
+                      fxLayoutGap="10px"
+                      fxLayoutAlign="end center">
+        <a mat-icon-button
+           [href]="portfolio.url"
+           target="_blank">
+            <fa-icon [icon]="['fas','link']"
+                     size='2x'></fa-icon>
+        </a>
+        <a mat-icon-button
+           [href]="portfolio.url"
+           target="_blank">
+            <fa-icon [icon]="['fab','github']"
+                     size='2x'></fa-icon>
+        </a>
+    </mat-card-actions>
 </mat-card>

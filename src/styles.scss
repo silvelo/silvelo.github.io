@@ -17,11 +17,13 @@ body {
 }
 
 
+//lt-sm	
+@media screen and (max-width: 599px){}
+//lt-md	
+@media screen and (max-width: 959px){}
+//lt-lg	
+@media screen and (max-width: 1279px){}
+//lt-xl	
+@media screen and (max-width: 1919px){}
 
-@media screen and (max-width: 959px) {}
 
-//  lt-lg
-@media screen and (max-width: 1279px) {}
-
-//  lt-sm
-@media screen and (max-width: 599px) {}
