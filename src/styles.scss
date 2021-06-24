@@ -6,155 +6,20 @@ body {
 }
 
 body {
-  margin     : 0;
+  margin: 0;
   font-family: "Helvetica", sans-serif;
 }
 
 .img-responsive {
-  padding-left: 10px;
-  max-width   : 120px;
-  height      : auto;
-}
-
-.date {
-  padding-left: 10px;
-}
-
-.list-image {
-  width       : 100%;
-  max-width   : 60px;
-  height      : auto;
-  margin-right: 25px;
-}
-
-.nav-list {
-  border-bottom: 1px solid black;
-}
-
-.link-active {
-  background-color: rgb(200, 200, 200, 0.4);
-}
-
-a .mat-icon {
-  color: black;
-}
-
-.mat-icon.md-18 {
-  height   : 18px;
-  width    : 18px;
-  font-size: 18px;
-}
-
-.mat-icon.md-24 {
-  height   : 24px;
-  width    : 24px;
-  font-size: 24px;
-
-}
-
-.mat-icon.md-36 {
-  height   : 36px;
-  width    : 36px;
-  font-size: 36px;
-}
-
-
-.mat-icon.md-48 {
-  height   : 48px;
-  width    : 48px;
-  font-size: 48px;
-}
-
-mat-accordion {
   width: 100%;
+  max-width: 160px;
+  height: auto;
 }
 
-.mat-expansion-panel-header {
+@media screen and (max-width: 959px) {}
 
-  padding-left: 0 !important;
-}
+//  lt-lg
+@media screen and (max-width: 1279px) {}
 
-
-
-.mat-expansion-panel-header-description {
-  color      : initial;
-  font-weight: bold;
-  font-size  : 18px;
-}
-
-.mat-accordion .mat-expansion-panel {
-  margin: 1em 0;
-
-}
-
-.mat-expansion-panel-header[aria-disabled=true] {
-  color: rgba(0, 0, 0, .87);
-}
-
-
-.calendar {
-  color      : initial;
-  font-weight: 400;
-  font-size  : 16px;
-}
-
-.calendar-years {
-  padding-left: 5px;
-}
-
-mat-drawer-content {
-  padding: 0 10px !important;
-}
-
-@media screen and (max-width: 959px) {
-  h1 {
-    font-size: 16px !important;
-  }
-
-  mat-panel-description {
-    font-size: 14px !important;
-  }
-
-  //  lt-md
-  .calendar {
-    font-size: 12px !important;
-  }
-
-  .mat-expansion-panel-header {
-    padding: 0 10px !important;
-  }
-}
-
-@media screen and (max-width: 1279px) {
-  //  lt-lg
-}
-
-@media screen and (max-width: 599px) {
-
-  //  lt-sm
-  h1 {
-    font-size: 18px !important;
-  }
-
-  .list-image {
-    display: none;
-  }
-
-  .mat-expansion-panel-header {
-    padding: 0 5px !important
-  }
-
-  mat-panel-description {
-    font-size: 10px !important;
-  }
-
-  .image {
-    max-height: 40px !important;
-    max-width : 40px !important;
-  }
-
-  .calendar {
-    font-size: 10px !important;
-  }
-
-}
+//  lt-sm
+@media screen and (max-width: 599px) {}

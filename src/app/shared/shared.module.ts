@@ -14,15 +14,18 @@ import {
   faTwitter
 } from '@fortawesome/free-brands-svg-icons';
 import {
+  faAward,
   faBars,
   faBook,
   faBullhorn,
+  faCalendar,
   faCertificate,
   faEnvelope,
   faEye,
   faHome,
   faLink,
-  faQuestionCircle
+  faQuestionCircle,
+  faUserGraduate
 } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -51,7 +54,10 @@ export class SharedModule {
       faQuestionCircle,
       faBullhorn,
       faBook,
-      faBars
+      faBars,
+      faCalendar,
+      faAward,
+      faUserGraduate
     );
   }
 }

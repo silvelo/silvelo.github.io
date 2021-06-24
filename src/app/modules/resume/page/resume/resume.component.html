@@ -1,0 +1,136 @@
+<mat-card class="mat-elevation-z0">
+     <mat-card-title fxLayout="row"
+                     fxLayoutGap="10px"
+                     fxLayoutAlign="start center">
+          <fa-icon [icon]="['fas','user-graduate']"
+                   size="2x"></fa-icon>
+          <span>Educación</span>
+     </mat-card-title>
+</mat-card>
+
+
+<mat-card *ngFor="let edu of education"
+          class="mat-elevation-z8">
+     <mat-card-header fxLayout="row"
+                      fxLayoutGap="5px"
+                      fxLayoutAlign="start center">
+          <img [src]="edu.college_logo"
+               mat-card-avatar>
+          <div fxFlex
+               fxLayout="column"
+               fxLayoutAlign="center start">
+               <mat-card-title fxLayout="row"
+                               fxLayoutAlign="center center">{{edu.degree}}</mat-card-title>
+               <mat-card-subtitle fxLayout="row"
+                                  fxLayoutAlign="center centers">{{edu.college_name}}</mat-card-subtitle>
+          </div>
+
+          <div fxLayoutAlign="end center"
+               fxLayoutGap="10px">
+               <fa-icon [icon]="['fas', 'calendar']"
+                        size="1x"></fa-icon>
+               <span>{{edu.start_date | date: 'dd/MM/yyyy'}}</span>
+               <span *ngIf="edu.end_date">-</span>
+               <span *ngIf="edu.end_date">{{edu.end_date | date: 'dd/MM/yyyy'}}</span>
+          </div>
+
+
+     </mat-card-header>
+</mat-card>
+
+
+<mat-card class="mat-elevation-z0">
+     <mat-card-title fxLayout="row"
+                     fxLayoutGap="10px"
+                     fxLayoutAlign="start center">
+          <fa-icon [icon]="['fas','user-graduate']"
+                   size="2x"></fa-icon>
+          <span>Experiencia</span>
+     </mat-card-title>
+</mat-card>
+
+<mat-card *ngFor="let exp of experience"
+          class="mat-elevation-z8">
+     <mat-card-header fxLayout="row"
+                      fxLayoutGap="5px"
+                      fxLayoutAlign="start center">
+          <img [src]="exp.company_logo"
+               mat-card-avatar>
+          <div fxFlex
+               fxLayout="column"
+               fxLayoutAlign="center start">
+               <mat-card-title fxLayout="row"
+                               fxLayoutAlign="center center">{{exp.company_name}}</mat-card-title>
+               <mat-card-subtitle fxLayout="row"
+                                  fxLayoutAlign="center centers">{{exp.position}}</mat-card-subtitle>
+          </div>
+
+          <div fxLayoutAlign="end center"
+               fxLayoutGap="10px">
+               <fa-icon [icon]="['fas', 'calendar']"
+                        size="1x"></fa-icon>
+               <span>{{exp.start_date | date: 'dd/MM/yyyy'}}</span>
+               <span *ngIf="exp.end_date">-</span>
+               <span *ngIf="exp.end_date">{{exp.end_date | date: 'dd/MM/yyyy'}}</span>
+          </div>
+     </mat-card-header>
+     <mat-card-content>
+          {{exp.description}}
+     </mat-card-content>
+</mat-card>
+
+<mat-card class="mat-elevation-z0">
+     <mat-card-title fxLayout="row"
+                     fxLayoutGap="10px"
+                     fxLayoutAlign="start center">
+          <fa-icon [icon]="['fas','user-graduate']"
+                   size="2x"></fa-icon>
+          <span>Cursos y Certificados</span>
+     </mat-card-title>
+</mat-card>
+
+<mat-card *ngFor="let cert of certifications"
+          class="mat-elevation-z8">
+     <mat-card-header fxLayout="row"
+                      fxLayoutGap="5px"
+                      fxLayoutAlign="start center">
+          <img [src]="cert.company_logo"
+               mat-card-avatar>
+          <div fxFlex
+               fxLayout="column"
+               fxLayoutAlign="center start">
+               <mat-card-title fxLayout="row"
+                               fxLayoutAlign="center center">{{cert.company_name}}</mat-card-title>
+               <mat-card-subtitle fxLayout="row"
+                                  fxLayoutAlign="center centers">{{cert.title}}</mat-card-subtitle>
+          </div>
+
+          <div fxLayoutAlign="end center"
+               fxLayoutGap="10px">
+               <fa-icon [icon]="['fas', 'calendar']"
+                        size="1x"></fa-icon>
+               <span>{{cert.expedition | date: 'dd/MM/yyyy'}}</span>
+          </div>
+     </mat-card-header>
+     <mat-card-actions fxLayout="row"
+                       fxLayoutAlign="end center">
+          <a mat-stroked-button
+             [href]="cert.credential_url">
+               <div fxLayout="row"
+                    fxLayoutGap="5px"
+                    fxLayoutAlign="center center">
+                    <fa-icon size="1x"
+                             [icon]="['fas', 'award']"></fa-icon>
+                    <span>Certificado</span>
+               </div>
+          </a>
+
+     </mat-card-actions>
+
+</mat-card>
+
+
+
+<!-- {{education | json}}
+{{experience | json}}
+{{certifications | json}} -->
